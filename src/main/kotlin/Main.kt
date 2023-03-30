@@ -4,12 +4,13 @@ fun main(){
 
    val avgTotal = heights(listOf(3.5,5.67,4.5,78.0,90.5))
     println(avgTotal)
+
     human()
 
-    var manyPeople = morePeople()
-    println(manyPeople)
+    val people = peoples()
+    println(people)
 
-    var cars = vehicles()
+    val cars = vehicles()
     println(cars)
 
 
@@ -52,10 +53,10 @@ fun human(){
 
 //Given a list similar to the one above, write a function in which you will
 //create 2 more people objects and add them to the list at one go.
-fun morePeople(): List<Person>{
-    val name4 = Person("Bridget",20,4.5,60.0)
-    val name5 = Person("Anne",40,5.7,80.8)
-    return mutableListOf(name4,name5)
+fun peoples(): List<Person>{
+    val person4 = Person("Bridget",20,4.5,60.0)
+    val person5 = Person("Anne",40,5.7,80.8)
+    return mutableListOf(person4,person5)
 }
 //Write a function that takes in a list of Car objects each with a
 //registration and mileage attribute and returns the average mileage of
@@ -66,12 +67,13 @@ fun morePeople(): List<Person>{
 data class Car(var registration: String, var mileage: Double)
 
   fun vehicles(): Double{
-      val car1 = Car("KCBC",400.0)
-      val car2 = Car("TCBG",500.0)
-      val car3 = Car("JBBJ",600.0)
-      val car4 = Car("UBBC",700.0)
+      val car1 = Car("KCZ 999Z ",400.0)
+      val car2 = Car("KAA 001A",500.0)
+      val car3 = Car("KAZ 999Z",600.0)
+      val car4 = Car("KDA 001A",700.0)
+      val car5 = Car("KDZ 999Z",800.0)
 
       val carList = mutableListOf(car1,car2,car3,car4)
-      val getavg = listOf(car1.mileage, car2.mileage, car3.mileage, car4.mileage)
+      val getavg = listOf(car1.mileage, car2.mileage, car3.mileage, car4.mileage, car5.mileage)
       return (getavg.average())
   }
